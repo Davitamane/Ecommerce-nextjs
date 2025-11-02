@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Card from "../components/Card";
+import Card from "../_components/Card";
 
 export type Product = {
   id: number;
@@ -26,10 +26,9 @@ export default async function page() {
   }
   const json: ApiResponse = await res.json();
   const products = json.data;
-  console.log(products);
 
   return (
-    <div>
+    <div className="mx-25 flex flex-col gap-8 my-18">
       <Link href="/checkout">checkout</Link>
       <div className="grid grid-cols-4 gap-y-12 gap-x-6">
         {products.map((product) => (

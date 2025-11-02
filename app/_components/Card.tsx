@@ -11,9 +11,10 @@ function Card({ data }: CardProps) {
     <Link href={`/products/${data.id}`}>
       <div className="w-full overflow-hidden hover:shadow-md  rounded-b-2xl transition-shadow duration-300">
         <Image
-          src={data.cover_image || "/fallback.jpg"} // fallback image in public folder
+          src={data.cover_image || "/fallback.jpg"}
           alt={data.name}
           width={400}
+          loading="eager"
           height={400}
           className="w-full object-cover object-center h-fit"
         />

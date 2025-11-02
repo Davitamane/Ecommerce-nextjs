@@ -6,7 +6,7 @@ export default function Navigation() {
   return (
     <header className="flex justify-between items-center px-25 py-10">
       <Link href="/">
-        <Image src={Logo} alt="logo" className="w-60" />
+        <Image src={Logo} alt="logo" className="w-60" loading="eager" />
       </Link>
       <div className="flex gap-5">
         {/* <button>
