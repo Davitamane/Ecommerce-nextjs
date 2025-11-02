@@ -1,12 +1,14 @@
-// next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    domains: ["api.redseam.redberryinternship.ge"], // whitelist your API host
+  },
   async redirects() {
     return [
       {
-        source: '/',       // when user visits /
-        destination: '/products', // redirect them to /product
-        permanent: true,   // use false if you might change it later
+        source: "/",
+        destination: "/products",
+        permanent: true,
       },
     ];
   },
